@@ -1,0 +1,139 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>NAVER</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="wrap-center">
+            <div id="header">
+                <button id="header-hamburger">
+                    <!-- ::before -->
+                    <div></div>
+                    <span class="blind">확장 영역</span>
+                    <!-- ::after -->
+                </button>
+                <button id="header-naverpay">
+                    <!-- ::before -->
+                    <div></div>
+                    <span class="blind">네이버 페이</span>
+                    <!-- ::after -->
+                </button>
+                <button id="header-notice">
+                    <!-- ::before -->
+                    <div></div>
+                    <span class="blind">알림</span>
+                    <!-- ::after -->
+                </button>
+            </div>
+            <style>
+                /* 개발할 때 편하게 하다가 나중에 css 파일로 정리 */
+                #search > form {
+                    display: inline-block;
+                    width: 708px;
+                    height: 60px;
+                    position: absolute;
+                    top: 64px;
+                    left: 50%;
+                    border: 1px solid #03c75a;
+                    border-radius: 33px;
+                    background-color: #fff;
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    text-align: left;
+                }
+                #search-svg {
+                    width: 68px;
+                    height: 100%;
+                    margin-right: 12px;
+                    padding: 17px 17px 17px 27px;
+                    display: inline-block;
+                } 
+                #search-svg > svg {
+                    fill: #03c75a;
+                    width: 24px;
+                    height: 24px;
+                }
+                #search > form > input {
+                    display: inline-block;
+                    width: 480px;
+                    height: 58px;
+                    color: #000;
+                    color: var(--color_search);
+                    z-index: 10;
+                    position: relative;
+                    padding: 17px 0;
+                    background-color: rgba(0,0,0,0);
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    font-size: 1rem;
+                    line-height: 24px;
+                    font-weight: bold;
+                    outline: 0;
+                    border: none;
+                    vertical-align:super;
+                }
+                #search-right {
+                    display: inline-block;
+                }
+                #search-keyboard::before{
+                    content: "";
+                    display: block;
+                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e43f76ed.png);
+                    background-size: 424px 409px;
+                    background-position: -270px -234px;
+                    background-repeat: no-repeat;
+                    width: 24px;
+                    height: 16px;
+                }
+                #search-recent::before{
+                    content: "";
+                    display: block;
+                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e43f76ed.png);
+                    background-size: 424px 409px;
+                    background-position: -323px -170px;
+                    background-repeat: no-repeat;
+                    width: 10px;
+                    height: 6px;
+                }
+                #search-button::before{
+                    content: "";
+                    display: block;
+                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e43f76ed.png);
+                    background-size: 424px 409px;
+                    background-position: -364px -159px;
+                    background-repeat: no-repeat;
+                    width: 25px;
+                    height: 25px;
+                }
+                
+            </style>
+            <div id="search">
+                <!-- form + input 엔터 자동으로 검색페이지로 -->
+                <form action="">
+                    <a id="search-svg" href="#"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path></svg></a>
+                    <label for="search-input" class="blind">검색어 입력</label>
+                    <input id="search-input" type="text" placeholder="검색어를 입력하세요"/>
+                    <div id="search-right">
+                        <button href="#" id="search-keyboard">
+                            <span class="blind">입력도구</span>
+                        </button>
+                        <button href="#" id="search-recent">
+                            <span class="blind">자도완성/최근검색어펼치기</span>
+                        </button>
+                        <button id="search-button">
+                            <div><span class="blind">검색</span></div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div id="nav"></div>
+            <div id="main"></div>
+        </div>
+    </div>
+</body>
+</html>
